@@ -3,6 +3,7 @@
 /**
  * main - print string
  *
+ * Return: (0)
  */
 int main(void)
 {
