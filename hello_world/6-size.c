@@ -1,6 +1,7 @@
 #include<stdio.h>
 /**
- * This is the initial short description
+ * This is the initial short description 
+ *
  * main:
  *
  * Return: (0)
