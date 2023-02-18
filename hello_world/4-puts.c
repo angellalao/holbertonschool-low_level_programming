@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-/*
- * main: - this is the function description
+/**
+ * main - this is the function description
  *
  * Return: - return header tag is mandatory if function returns
  * any value but void
