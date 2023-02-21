@@ -10,15 +10,17 @@ int main(void)
 	char lc = 'a';
 	char uc = 'A';
 
-	while
-		(lc <= 'z');
-	putchar(lc);
-	lc++;
+	while (lc <= 'z')
+	{
+		putchar(lc);
+		lc++;
+	}
 
-	while
-		(uc <= 'Z');
-	putchar(uc);
-	uc++;
+	while (uc <= 'Z')
+	{
+		putchar(uc);
+		uc++;
+	}
 
 	putchar('\n');
 
