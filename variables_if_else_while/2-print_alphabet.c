@@ -1,5 +1,5 @@
 #include <stdio.h>
-/*
+/**
  * main - Entry point
  *
  * Return: 0
@@ -13,7 +13,7 @@ int main(void)
 	while (alph >= 'a' && alph <= 'z')
 	{
 	putchar(alph);
-	alph = alph + 1;
+	alph++;
 	}
 
 	return (0);
