@@ -1,5 +1,5 @@
 #include <stdio.h>
-/*
+/**
  * main - print alphabet except 'q' and 'e'
  *
  * Return: 0
@@ -15,7 +15,10 @@ int main(void)
 	alph++;
 	}
 
+	if (alph = 'z')
+	{
 	putchar('\n');
+	}
 
 	return (0);
 }
