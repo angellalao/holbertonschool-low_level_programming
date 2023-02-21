@@ -22,6 +22,7 @@ int main(void)
 		else
 		{
 			putchar(num);
+			num++;
 		}
 	}
 
