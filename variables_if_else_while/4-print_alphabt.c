@@ -9,15 +9,16 @@ int main(void)
 {
 	char alph = 'a';
 
-	if (alph <= 'z' && alph != 'q' && alph != 'e')
+	while (alph <= 'z')
 	{
-		putchar(alph);
+		if (alph != 'e' || alph != 'q')
+		{
+			putchar(alph);
+	       	}
 		alph++;
 	}
-	else if (alph == 'e' || alph == 'q')
-	{
-		putchar('\n');
-	}
+
+	putchar('\n');
 
 	return (0);
 }
