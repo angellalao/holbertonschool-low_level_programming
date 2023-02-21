@@ -12,9 +12,10 @@ int main(void)
 
 	while (alph >= 'a' && alph <= 'z')
 	{
-	putchar(alph);
-	alph++;
+		putchar(alph);
+		alph++;
 	}
+	putchar('\n')
 
 	return (0);
 }
