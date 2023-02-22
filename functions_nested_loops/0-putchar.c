@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main -
+ * main - print _putchar
  *
  * Return: 0
  */
@@ -15,9 +15,9 @@ int main(void)
 	while (i <= 7)
 	{
 		_putchar(word[i]);
+		i = i + 1;
 	}
 
 	_putchar('\n');
-	
-      	return (0);
+	return (0);
 }
