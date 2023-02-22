@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - print lower case alphabet 10 times
+ * print_alphabet_x10 - print lower case alphabet 10 times
  *
  *
  */
@@ -12,7 +12,7 @@ void print_alphabet_x10(void)
 
 	i = '0';
 
-	while (i <= 9)
+	while (i <= '9')
 	{
 		char alph;
 
@@ -26,8 +26,8 @@ void print_alphabet_x10(void)
 
 		_putchar('\n');
 
-	}
+		i = i + 1;
 
-	i = i + 1;
+	}
 
 }
