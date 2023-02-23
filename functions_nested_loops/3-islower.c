@@ -10,16 +10,14 @@
 
 int _islower(int c)
 {
-	int lc = '1';
-	int Uc = '0';
 
 	if (c >= 'a' && c <= 'z')
 	{
-		return (lc);
+		return (1);
 	}
 	else
 	{
-		return (Uc);
+		return (0);
 	}
 
 }
