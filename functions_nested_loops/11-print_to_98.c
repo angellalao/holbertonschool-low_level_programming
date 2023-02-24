@@ -8,11 +8,14 @@
  */
 void print_to_98(int n)
 {
+	int neg;
+
 	while (n <= 98)
 	{
+		neg = (-1 * n);
 		if (n < 0 && n != 98)
 		{
-			printf("-(%d), ", n);
+			printf("%d, ", neg);
 		}
 		else if (n >= 0 && n != 98)
 		{
@@ -24,4 +27,5 @@ void print_to_98(int n)
 		}
 		n = n + 1;
 	}
+	printf("\n");
 }
