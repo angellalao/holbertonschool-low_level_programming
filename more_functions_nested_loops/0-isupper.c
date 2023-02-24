@@ -2,6 +2,7 @@
 
 /**
  * _isupper - return 1 if uppercase, 0 if lowercase
+ * @c: letter to be checked
  * Return: 0 or 1
  */
 int _isupper(int c)
