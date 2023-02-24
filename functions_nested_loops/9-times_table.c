@@ -2,16 +2,13 @@
 
 /**
  * times_table - print a 9 times table
- * @r: multiplication row number
- * @c: multiplication column number
- * @p: multiplcation of n & m
  */
 
 void times_table(void)
 {
-	int r;
-	int c;
-	int p;
+	int r; /*mulitplication row number*/
+	int c; /*multiplication column number*/
+	int p; /* product of r & c */
 
 	r = 0;
 	c = 0;
@@ -21,9 +18,13 @@ void times_table(void)
 		while (c < 10)
 		{
 			p = (r * c);
-			if (p < 10)
+			if (p < 10 && c != 0)
 			{
 				_putchar(' ');
+				_putchar(p + '0');
+			}
+			else if (p < 10 && c == 0)
+			{
 				_putchar(p + '0');
 			}
 			else
