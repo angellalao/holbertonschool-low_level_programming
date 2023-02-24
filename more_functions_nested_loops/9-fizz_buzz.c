@@ -17,7 +17,7 @@ int main(void)
 		{
 			printf("Fizz ");
 		}
-		else if (((num % 5) == 0) && ((num % 3) != 0))
+		else if (((num % 5) == 0) && ((num % 3) != 0) && num != 100)
 		{
 			printf("Buzz ");
 		}
