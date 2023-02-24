@@ -2,33 +2,44 @@
 
 /**
  * times_table - print a 9 times table
- *
+ * @r: multiplication row number
+ * @c: multiplication column number
+ * @p: multiplcation of n & m
  */
 
 void times_table(void)
 {
-	int n;
-	int m;
+	int r;
+	int c;
+	int p;
 
-	n = 0;
-	m = 0;
+	r = 0;
+	c = 0;
+	p = (r * c);
 
-	while (m < 10)
+	while (r < 10)
 	{
-		while (n < 10)
+		while (c < 10)
 		{
-			_putchar((n * m) + '0');
-
-			if (n < 9)
+			if (p < 10)
+			{
+				_putchar(' ');
+				_putchar(p + '0');
+			}
+			else
+			{
+				_putchar((p / 10) + '0');
+				_putchar((p % 10) + '0');
+			}
+			if (c < 9)
 			{
 				_putchar(',');
 				_putchar(' ');
 			}
-			n = n + 1;
+			c = c + 1;
 		}
 		_putchar('\n');
-		m = m + 1;
-		n = 0;
+		r = r + 1;
+		c = 0;
 	}
-
 }
