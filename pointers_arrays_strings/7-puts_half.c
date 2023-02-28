@@ -34,21 +34,21 @@ void puts_half(char *str)
 		if (num == 0)
 		{
 			count = (len / 2);
-			_putchar(str[count]);
+			/*_putchar(str[count]);*/
 			while (count < len)
 			{
-				count = count + 1;
 				_putchar(str[count]);
+				count = count + 1;
 			}
 		}
 		else if (num == 1)
 		{
-			count = ((len - 1) / 2);
-			_putchar(str[count]);
+			count = ((len + 1) / 2);
+			/*_putchar(str[count]);*/
 			while (count < len)
 			{
-				count = count + 1;
 				_putchar(str[count]);
+				count = count + 1;
 			}
 		}
 		_putchar('\n');
