@@ -35,7 +35,7 @@ void puts_half(char *str)
 		{
 			count = (len / 2);
 			_putchar(str[count]);
-			while (count <= len)
+			while (count < len)
 			{
 				count = count + 1;
 				_putchar(str[count]);
@@ -45,7 +45,7 @@ void puts_half(char *str)
 		{
 			count = ((len - 1) / 2);
 			_putchar(str[count]);
-			while (count <= len)
+			while (count < len)
 			{
 				count = count + 1;
 				_putchar(str[count]);
