@@ -36,11 +36,12 @@ void rev_string(char *s)
 {
 	int len;
 
-	len = _strlen(s) - 1;
+	len = _strlen(s);
 
 	while (len >= 0)
 	{
 		_putchar(s[len]);
 		len = len - 1;
 	}
+	_putchar('\n');
 }
