@@ -1,17 +1,4 @@
-#include <unistd.h>
 #include "main.h"
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
 
 /**
  * _strlen - returns the length of a string
@@ -35,13 +22,18 @@ int _strlen(char *s)
 void rev_string(char *s)
 {
 	int len;
+	int t;
+	int c;
 
-	len = _strlen(s);
-
-	while (len >= 0)
+	len = _strlen(s) - 1;
+	c = 0;
+	while (len != c)
 	{
-		_putchar(s[len]);
+		t = s[c];
+		s[c] = s[len];
+		s[len] = t;
+		c = c + 1;
 		len = len - 1;
 	}
-	_putchar('\n');
+
 }
