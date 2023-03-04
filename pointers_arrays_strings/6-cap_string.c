@@ -18,10 +18,6 @@ char *cap_string(char *str)
 		else if (str[i] == ' ' || str[i] == '.' || str[i] == '\n' || str[i] == '\t')
 		{
 			i = i + 1;
-			while (str[i] == ' ')
-			{
-				i = i + 1;
-			}
 			if (str[i] >= 97 && str[i] <= 122)
 			{
 				str[i] = str[i] - 32;
