@@ -15,11 +15,11 @@ int _strcmp(char *s1, char *s2)
 	sizedif = s1[i] - s2[k];
 	while (s1[i] != '\0')
 	{
-		if (s1[i] != s2[k])
+		while (s1[i] != s2[k])
 		{
 			return (sizedif);
 		}
-		else if (s1[i] == s2[k])
+		if (s1[i] == s2[k])
 		{
 			i = i + 1;
 			k = k + 1;
