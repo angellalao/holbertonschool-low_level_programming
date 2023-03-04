@@ -15,7 +15,7 @@ char *leet(char *str)
 	while (str[k] != '\0')
 	{
 		i = 0;
-		while (i < 0)
+		while (i < 5)
 		{
 			if (str[k] == a[i] || str[k] == a[i] - 32)
 			{
