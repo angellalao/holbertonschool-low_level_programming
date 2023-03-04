@@ -19,7 +19,7 @@ int _strcmp(char *s1, char *s2)
 		{
 			i = i + 1;
 			k = k + 1;
-			if (s1[i] == '\0')
+			if (s1[i] == '\0' || s2[k] == '\0')
 			{
 				return (0);
 			}
