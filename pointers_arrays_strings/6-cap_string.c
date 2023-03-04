@@ -15,7 +15,7 @@ char *cap_string(char *str)
 		{
 			str[i] = str[i] - 32;
 		}
-		else if (str[i] == ' ' || str[i] == '.')
+		else if (str[i] == ' ' || str[i] == '.' || str[i] == '\n' || str[i] == '\t')
 		{
 			i = i + 1;
 			while (str[i] == ' ')
