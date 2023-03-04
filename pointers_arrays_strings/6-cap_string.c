@@ -11,7 +11,7 @@ char *cap_string(char *str)
 
 	while (str[i] != '\0')
 	{
-		if (str[i] == ' ')
+		if (str[i] == ' ' || str[i] == '.')
 		{
 			i = i + 1;
 			if (str[i] >= 97 && str[i] <= 122)
