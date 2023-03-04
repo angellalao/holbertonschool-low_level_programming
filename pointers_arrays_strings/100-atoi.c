@@ -3,10 +3,13 @@
 #include "main.h"
 
 /**
- * is_digit -
- * is_negative -
- * number_of_digits -
- * atoi -
+ * is_digit - i
+ * is_negative - i
+ * number_of_digits - i
+ * atoi - i
+ * skip_it - i
+ * @c:
+ * Return: result
  */
 
 int is_digit(char c) {
