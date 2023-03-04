@@ -9,8 +9,8 @@ char *leet(char *str)
 {
 	int k;
 	int i;
-	char a[] = "aeotl";
-	char n[] = "43071";
+	char a[] = {'a', 'e', 'o', 't', 'l'};
+	char n[] = {'4', '3', '0', '7', '1'};
 
 	k = 0;
 	while (str[k] != '\0')
