@@ -10,22 +10,20 @@ int _strcmp(char *s1, char *s2)
 {
 	int i = 0;
 	int k = 0;
-	int tmp = 0;
+	int sizedif;
 
+	sizedif = s1[i] - s2[k];
 	while (s1[i] != '\0')
 	{
-		if (s1[i] > s2[k])
+		if (s1[i] != s2[k])
 		{
-			tmp = tmp + 1;
+			return (sizedif);
 		}
-		else if (s1[i] < s2[k])
+		else if (s1[i] == s2[k])
 		{
-			tmp = tmp - 1;
+			i = i + 1;
+			k = k + 1;
 		}
-		/*else if (s1[i] == s2[k])*/
-		i = i + 1;
-		k = k + 1;
-
 	}
-	return (tmp);
+	return (0);
 }
