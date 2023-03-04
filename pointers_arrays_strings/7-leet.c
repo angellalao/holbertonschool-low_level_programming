@@ -26,6 +26,5 @@ char *leet(char *str)
 		}
 		k = k + 1;
 	}
-	str[i] = '\0';
 	return (str);
 }
