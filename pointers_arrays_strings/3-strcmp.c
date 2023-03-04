@@ -12,7 +12,7 @@ int _strcmp(char *s1, char *s2)
 	int k = 0;
 	int sizedif;
 
-	sizedif = s1[i] - s2[k];
+
 	while (s1[i] != '\0')
 	{
 		while (s1[i] == s2[k])
@@ -26,6 +26,7 @@ int _strcmp(char *s1, char *s2)
 		}
 		if (s1[i] != s2[k])
 		{
+			sizedif = s1[i] - s2[k];
 			return (sizedif);
 		}
 	}
