@@ -1,22 +1,25 @@
 #include "main.h"
 
 /**
- *_strcpy -copies a string from source to destination
- *@dest: pointer to the destination that will store the copied string
- *@src: address of the string tp be copied
- *Return: (p) a pointer to the beginningof the destination array
+ *print_chessboard -prints a chessboard
+ *@a: chessboard size
  */
 
-char *_strcpy(char *dest, char *src)
+void print_chessboard(char (*a)[8])
 {
-	char *p = dest;
+	int y;
+	int x;
 
-	while (*src != '\0')
+	y = 0;
+	while (y < 8)
 	{
-		*dest = *src;
-		dest = dest + 1;
-		src = src + 1;
+		x = 0;
+		while (x < 8)
+		{
+			_putchar(a[y][x]);
+			x = x + 1;
+		}
+		_putchar('\n');
+		y = y + 1;
 	}
-	*dest = '\0';
-	return (p);
 }
