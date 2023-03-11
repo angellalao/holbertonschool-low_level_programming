@@ -5,7 +5,7 @@
 
 /**
  * check_dig - checks if all arguments are digits
- * @argv: arguments
+ * @a: arguments
  * Return: 0 or 1
  */
 
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 	num = 0;
 	while (c < argc)
 	{
-		if (check_dig(argv[c]) == 0)
+		if (check_dig(argv[c]) == 1)
 		{
 			printf("Error\n");
 			return (1);
