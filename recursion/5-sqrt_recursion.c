@@ -13,11 +13,11 @@ int sq_root(int n, int root)
 	{
 		return (root);
 	}
-	else if (root < 0)
+	else if (root * root > n)
 	{
 		return (-1);
 	}
-	return (sq_root(n, root - 1));
+	return (sq_root(n, root + 1));
 }
 
 /**
@@ -32,5 +32,5 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	return (sq_root(n, n));
+	return (sq_root(n, 1));
 }
