@@ -19,14 +19,14 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	i = 0;
+	i = 1;
 	while (str[i] != '\0')
 	{
 		i = i + 1;
 	}
-	newstring = malloc(sizeof(char) * (i - 1));
+	newstring = malloc(sizeof(char) * i);
 	j = 0;
-	while (j <= i)
+	while (j < i)
 	{
 		newstring[j] = str[j];
 		j = j + 1;
