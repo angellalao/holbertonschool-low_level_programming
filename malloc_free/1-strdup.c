@@ -24,17 +24,12 @@ char *_strdup(char *str)
 	{
 		i = i + 1;
 	}
-	newstring = malloc(sizeof(char) * i);
+	newstring = malloc(sizeof(char) * (i - 1));
 	j = 0;
 	while (j <= i)
 	{
 		newstring[j] = str[j];
 		j = j + 1;
-	}
-
-	if (str == NULL)
-	{
-		return (NULL);
 	}
 	return (newstring);
 }
