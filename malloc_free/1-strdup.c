@@ -31,5 +31,9 @@ char *_strdup(char *str)
 		newstring[j] = str[j];
 		j = j + 1;
 	}
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	return (newstring);
 }
