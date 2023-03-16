@@ -3,6 +3,22 @@
 #include <stdlib.h>
 
 /**
+ * str_len -
+ * @str:
+ * Return:
+ */
+int str_len(char *str)
+{
+	int i = 0;
+
+	while (str[i] != '\0')
+	{
+		i = i + 1;
+	}
+	return (i);
+}
+
+/**
  * *string_nconcat - Write a function that concatenates two strings
  * @s1: first string
  * @s2: second string
@@ -14,6 +30,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *ptr;
 	unsigned int i;
 	unsigned int j;
+	unsigned int len1;
+	unsigned int len2;
 
 	if (s1 == NULL)
 	{
@@ -24,7 +42,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	}
 
-	ptr = malloc(sizeof(s1) + (sizeof(char) * n));
+	len1 = str_len(s1);
+	len2 = str_len(s2);
+	if (n > len2)
+	{
+		n = len2;
+	}
+	ptr = malloc(sizeof(*ptr) * (len1 + n + 1));
 	if (ptr == NULL)
 	{
 		return (NULL);
