@@ -3,9 +3,9 @@
 #include <stdlib.h>
 
 /**
- * str_len -
- * @str:
- * Return:
+ * str_len - returns string length
+ * @str: string
+ * Return: string length
  */
 int str_len(char *str)
 {
@@ -28,10 +28,7 @@ int str_len(char *str)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	unsigned int i;
-	unsigned int j;
-	unsigned int len1;
-	unsigned int len2;
+	unsigned int i, j, len1, len2;
 
 	if (s1 == NULL)
 	{
@@ -41,7 +38,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
-
 	len1 = str_len(s1);
 	len2 = str_len(s2);
 	if (n > len2)
