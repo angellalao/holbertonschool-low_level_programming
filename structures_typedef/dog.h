@@ -2,7 +2,10 @@
 #define _DOG_H_
 
 /**
- * dog - define new struct called dog
+ * struct dog - define new struct called dog
+ * @name: dog's name
+ * @age: dog's age
+ * @owner: dog's owner
  */
 struct dog
 {
