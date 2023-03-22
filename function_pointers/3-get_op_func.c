@@ -5,8 +5,10 @@
 #include <stdlib.h>
 
 /**
- *
- *
+ * get_op_func - selects the correct function to perform
+ * the operation asked by the user
+ * @s: operator
+ * Return: pointer to function
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -25,7 +27,7 @@ int (*get_op_func(char *s))(int, int)
 	{
 		if (strcmp(ops[i].op, s) == 0)
 		{
-			return(ops[i].f);
+			return (ops[i].f);
 		}
 		i = i + 1;
 	}
