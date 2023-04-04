@@ -4,9 +4,9 @@
 #include "lists.h"
 
 /**
- * print_list -
- * @h:
- * Return:
+ * print_list - prints all elements (nodes) in list_t
+ * @h: head
+ * Return: the number of nodes
  */
 size_t print_list(const list_t *h)
 {
