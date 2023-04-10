@@ -3,7 +3,7 @@
 /**
  * create_file - function that creates a file
  * @filename: name of file to create
- * @text_context: NULL terminated string to write to the file
+ * @text_content: NULL terminated string to write to the file
  * Return: 1 on success, -1 on failure.
  */
 int create_file(const char *filename, char *text_content)
@@ -23,9 +23,32 @@ int create_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
+	if (text_content == NULL)
+	{
+		close(fd);
+		return (1);
+	}
 	fd2 = open(text_content, O_RDONLY);
+	if (fd2 == -1)
+	{
+		close(fd);
+		return (-1);
+	}
 	bytes_read = read(fd2, buffer, sizeof(buffer));
+	if (bytes_read == -1)
+	{
+		close(fd);
+		close(fd2);
+		return (-1);
+	}
 	bytes_written = write(fd, buffer, bytes_read);
+	if (bytes_written == -1 || bytes_written < bytes_read)
+	{
+		close(fd);
+		close(fd2);
+		return (-1);
+	}
 	close(fd);
-	return (bytes_written);
+	close(fd2);
+	return (1);
 }
