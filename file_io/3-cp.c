@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	closex(fdfrom, argv[1]);
-	closex(fdto, argv[2]);
+	closex(fdfrom);
+	closex(fdto);
 	return (0);
 }
