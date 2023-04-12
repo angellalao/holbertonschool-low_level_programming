@@ -5,11 +5,11 @@
  * @fd: file descriptor to be closed
  * Return: -1 if error, otherwise return nothing
  */
-void closex(int fd)
+void closex(int fd, char *filename)
 {
 	if (close(fd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Can't close fd %s\n", filename);
 		exit(100);
 	}
 	return;
@@ -56,7 +56,7 @@ int main(int argc, char* argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	closex(fdfrom);
-	closex(fdto);
-	return (1);
+	closex(fdfrom, argv[1]);
+	closex(fdto, argv[2]);
+	return (0);
 }
