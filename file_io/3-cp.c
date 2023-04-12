@@ -9,7 +9,7 @@ void closex(int fd)
 {
 	if (close(fd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd");
+		dprintf(STDERR_FILENO, "Error: Can't close fd ");
 		exit(100);
 	}
 	return;
@@ -45,6 +45,11 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	bytes_read = read(fdfrom, buffer, sizeof(buffer));
+	if (bytes_read == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
 	while (bytes_read != 0)
 	{
 		bytes_written = write(fdto, buffer, bytes_read);
