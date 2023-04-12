@@ -6,11 +6,11 @@
  * @filename: name of file
  * Return: -1 if error, otherwise return nothing
  */
-void closex(int fd, char *filename)
+void closex(int fd)
 {
 	if (close(fd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd\n", filename);
+		dprintf(STDERR_FILENO, "Error: Can't close fd\n");
 		exit(100);
 	}
 	return;
