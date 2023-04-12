@@ -3,13 +3,14 @@
 /**
  * closex - close fd
  * @fd: file descriptor to be closed
+ * @filename: name of file
  * Return: -1 if error, otherwise return nothing
  */
 void closex(int fd, char *filename)
 {
 	if (close(fd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Can't close fd %s\n", filename);
+		dprintf(STDERR_FILENO, "Error: Can't close fd\n", filename);
 		exit(100);
 	}
 	return;
@@ -19,9 +20,9 @@ void closex(int fd, char *filename)
  * main - copies the content of a file to another file
  * @argc: number of arguments entered (int)
  * @argv: array vector (array of pointers to char)
- * Return:
+ * Return: 0
  */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int fdfrom, fdto;
 	char buffer[1024];
@@ -44,11 +45,11 @@ int main(int argc, char* argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	bytes_read = read(fdfrom, buffer, sizeof(buffer));
+	bytes_read = read(fdfrom, buffer, 1024);
 	if (bytes_read == -1)
 	{
-		dprintf(STDERR_FILENO,"Error: Can't read from file %s\n", argv[1]);
-                exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
 	bytes_written = write(fdto, buffer, bytes_read);
 	if (bytes_written == -1)
