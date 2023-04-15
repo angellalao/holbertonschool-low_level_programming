@@ -3,6 +3,7 @@
 /**
  * hash_table_print - prints a hash table
  * @ht: the hash table to be printed
+ * Return: nothing
  */
 
 void hash_table_print(const hash_table_t *ht)
@@ -35,5 +36,4 @@ void hash_table_print(const hash_table_t *ht)
 		i = i + 1;
 	}
 	printf("}\n");
-	return;
 }
