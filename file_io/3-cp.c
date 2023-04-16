@@ -12,7 +12,27 @@ void closex(int fd)
 		dprintf(STDERR_FILENO, "Error: Can't close fd ");
 		exit(100);
 	}
-	return;
+}
+
+/**
+ * readx - read from file descriptor
+ * @fdfrom: file descriptor to be read from
+ * @buffer: name of buffer to read in to
+ * @size: max number of bytes to be read
+ * @file_name: name of file to be read
+ * Return: number of bytes read on success, 98 on failure, 0 at end of file
+ */
+ssize_t readx(int fdfrom, char *buffer, int size, char *file_name)
+{
+	ssize_t bytes_read;
+
+	bytes_read = read(fdfrom, buffer, size);
+	if (bytes_read == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_name);
+		exit(98);
+	}
+	return (bytes_read);
 }
 
 /**
@@ -44,12 +64,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	bytes_read = read(fdfrom, buffer, sizeof(buffer));
-	if (bytes_read == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
+	bytes_read = readx(fdfrom, buffer, sizeof(buffer), argv[1]);
 	while (bytes_read != 0)
 	{
 		bytes_written = write(fdto, buffer, bytes_read);
@@ -58,12 +73,7 @@ int main(int argc, char *argv[])
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
-		bytes_read = read(fdfrom, buffer, sizeof(buffer));
-		if (bytes_read == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			exit(98);
-		}
+		bytes_read = readx(fdfrom, buffer, sizeof(buffer), argv[1]);
 	}
 	closex(fdfrom);
 	closex(fdto);
